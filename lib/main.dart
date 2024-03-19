@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './pages/login_page.dart';
 import './pages/home_page.dart';
+import './pages/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
       ),
-      home: LoginPage(),
+      home: ProfilePage(),
       // initialRoute: '/',
       // routes: {
       //   '/login': (context) => LoginPage(),
