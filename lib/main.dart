@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oktm_service_mobile/pages/home_admin_page.dart';
 import './pages/login_page.dart';
 import './pages/home_page.dart';
 import './pages/profile_page.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: ProfilePage(),
+
       // initialRoute: '/',
       // routes: {
       //   '/login': (context) => LoginPage(),
