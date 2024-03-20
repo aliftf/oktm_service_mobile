@@ -32,7 +32,7 @@ class Screen extends StatelessWidget {
                 children: [
                   Icon(Icons.arrow_back, color: Colors.white,),
                   SizedBox(width: 10,),
-                  Text("string", style: Theme.of(context).textTheme.bodyLarge,),
+                  Text("Pengajuan Perbaikan KTM", style: Theme.of(context).textTheme.bodyLarge,),
                 ],
               ),
             ),
@@ -50,7 +50,7 @@ class Screen extends StatelessWidget {
                       children: [
                         Icon(Icons.info_outline),
                         SizedBox(width: 10,),
-                        Text("string", style: TextStyle(),),
+                        Text("Informasi", style: TextStyle(),),
                       ],
                     ),
                     //content s&k
@@ -86,6 +86,9 @@ class Screen extends StatelessWidget {
                               borderRadius: BorderRadius.all(Radius.circular(20))
                             ),
                             height: 111,
+                            width: double.maxFinite,
+                            alignment: Alignment.topCenter,
+                            child: Text("Upload KSM", style: TextStyle(color: Colors.white),),
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -94,10 +97,39 @@ class Screen extends StatelessWidget {
                               border: Border.all(width: 1.0, color: Color(0xFFCECECE))
                             ),
                             height: 91,
+                            width: double.maxFinite,
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      child: Icon(Icons.file_copy_rounded)),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("File KTM",style: TextStyle(fontWeight: FontWeight.bold),),
+                                        Text("nama file atau keterangan",)
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Text("hapus file"),
+                                      Text("pilih file"),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           )
                         ]
                       ) 
                     ),
+                  
                     //form2
                     Container(
                       padding: EdgeInsets.symmetric(vertical: 10),
@@ -110,6 +142,9 @@ class Screen extends StatelessWidget {
                               borderRadius: BorderRadius.all(Radius.circular(20))
                             ),
                             height: 111,
+                            width: double.maxFinite,
+                            alignment: Alignment.topCenter,
+                            child: Text("Upload KSM", style: TextStyle(color: Colors.white),),
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -118,10 +153,39 @@ class Screen extends StatelessWidget {
                               border: Border.all(width: 1.0, color: Color(0xFFCECECE))
                             ),
                             height: 91,
+                            width: double.maxFinite,
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      child: Icon(Icons.file_copy_rounded)),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("File KTM",style: TextStyle(fontWeight: FontWeight.bold),),
+                                        Text("nama file atau keterangan",)
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Text("hapus file"),
+                                      Text("pilih file"),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           )
                         ]
                       ) 
                     ),
+                  
                     //form3
                     Container(
                       padding: EdgeInsets.symmetric(vertical: 10),
@@ -134,6 +198,9 @@ class Screen extends StatelessWidget {
                               borderRadius: BorderRadius.all(Radius.circular(20))
                             ),
                             height: 111,
+                            width: double.maxFinite,
+                            alignment: Alignment.topCenter,
+                            child: Text("Upload KSM", style: TextStyle(color: Colors.white),),
                           ),
                           Container(
                             decoration: BoxDecoration(
@@ -142,10 +209,39 @@ class Screen extends StatelessWidget {
                               border: Border.all(width: 1.0, color: Color(0xFFCECECE))
                             ),
                             height: 91,
+                            width: double.maxFinite,
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(15),
+                                      child: Icon(Icons.file_copy_rounded)),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("File KTM",style: TextStyle(fontWeight: FontWeight.bold),),
+                                        Text("nama file atau keterangan",)
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Text("hapus file"),
+                                      Text("pilih file"),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           )
                         ]
                       ) 
                     ),
+                  
                   ],
                 )
               ),
