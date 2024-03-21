@@ -25,6 +25,47 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(child: Text('Splash Screen'));
+    return Scaffold(
+      backgroundColor: Color(0xFF9E0000),
+      body: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 580,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(210),
+                  bottomRight: Radius.circular(210),
+                )),
+            child: Image.asset(
+              'assets/images/logo_tel_u.png',
+            ),
+          ),
+          SizedBox(height: 100),
+          Container(
+            child: Text(
+              "OKTM Service Mobile",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Poppins',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600),
+            ),
+          ),
+          SizedBox(height: 5),
+          Container(
+            child: Text(
+              "Telkom University",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Poppins',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
