@@ -45,118 +45,116 @@ class _HomeAdminPageState extends State<HomeAdminPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
-          child: Container(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return SafeArea(
+      child: Container(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
               children: [
-                Row(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 16),
-                      padding: const EdgeInsets.all(1),
-                      decoration: BoxDecoration(
-                          color: const Color(0xFF9E0000),
-                          borderRadius: BorderRadius.circular(5)),
-                      child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5),
-                          child: Image.asset(
-                              'assets/images/default_profile.jpg',
-                              width: 66,
-                              height: 66)),
-                    ),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Mahasiswa',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600, fontSize: 16),
-                        ),
-                        Text('1302210001'),
-                        Text('S1 Rekayasa Perangkat Lunak')
-                      ],
-                    )
-                  ],
-                ),
                 Container(
-                  margin: const EdgeInsets.symmetric(vertical: 20),
-                  child: Center(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CarouselSlider.builder(
-                          itemCount: _listImages.length,
-                          itemBuilder: (context, index, realIndex) {
-                            final _listImage = _listImages[index];
-
-                            return buildImage(_listImage, index);
-                          },
-                          options: CarouselOptions(
-                              height: 125,
-                              autoPlay: true,
-                              autoPlayInterval: const Duration(seconds: 3),
-                              autoPlayAnimationDuration:
-                                  const Duration(milliseconds: 800),
-                              autoPlayCurve: Curves.fastOutSlowIn,
-                              enlargeCenterPage: true,
-                              viewportFraction: 0.8,
-                              onPageChanged: ((index, reason) => setState(
-                                  () => _carouselActiveIndex = index)))),
-                      const SizedBox(height: 6),
-                      buildIndicator()
-                    ],
-                  )),
+                  margin: const EdgeInsets.only(right: 16),
+                  padding: const EdgeInsets.all(1),
+                  decoration: BoxDecoration(
+                      color: const Color(0xFF9E0000),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image.asset(
+                          'assets/images/default_profile.jpg',
+                          width: 66,
+                          height: 66)),
                 ),
-                const Text(
-                  'Pengajuan',
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-                ),
-                Container(
-                  margin: const EdgeInsets.symmetric(vertical: 20),
-                  child: const Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      HomeButton(
-                          label: 'List\nPengajuan',
-                          assetPath: 'assets/icons/ic_list_pengajuan.png'),
-                      SizedBox(width: 16),
-                      HomeButton(
-                          label: 'Finalisasi\nPengajuan',
-                          assetPath:
-                              'assets/icons/ic_finalisasi_pengajuan.png'),
-                    ],
-                  ),
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Informasi Hasil',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-                    ),
-                    Text(
-                      'Lihat Semua',
+                      'Mahasiswa',
                       style: TextStyle(
-                        color: Color(0xFF9E0000),
-                      ),
-                    )
+                          fontWeight: FontWeight.w600, fontSize: 16),
+                    ),
+                    Text('1302210001'),
+                    Text('S1 Rekayasa Perangkat Lunak')
                   ],
-                ),
-                const ItemListPengajuan(
-                    name: 'Regeh Renanda',
-                    nim: '1302210001',
-                    date: '02/04/2024',
-                    tipePengajuan: 'Pengajuan KTM Rusak',
-                    iconPath: 'assets/icons/ic_ktm_rusak.png')
+                )
               ],
             ),
-          ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 20),
+              child: Center(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CarouselSlider.builder(
+                      itemCount: _listImages.length,
+                      itemBuilder: (context, index, realIndex) {
+                        final _listImage = _listImages[index];
+
+                        return buildImage(_listImage, index);
+                      },
+                      options: CarouselOptions(
+                          height: 125,
+                          autoPlay: true,
+                          autoPlayInterval: const Duration(seconds: 3),
+                          autoPlayAnimationDuration:
+                              const Duration(milliseconds: 800),
+                          autoPlayCurve: Curves.fastOutSlowIn,
+                          enlargeCenterPage: true,
+                          viewportFraction: 0.8,
+                          onPageChanged: ((index, reason) => setState(
+                              () => _carouselActiveIndex = index)))),
+                  const SizedBox(height: 6),
+                  buildIndicator()
+                ],
+              )),
+            ),
+            const Text(
+              'Pengajuan',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 20),
+              child: const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  HomeButton(
+                      label: 'List\nPengajuan',
+                      assetPath: 'assets/icons/ic_list_pengajuan.png'),
+                  SizedBox(width: 16),
+                  HomeButton(
+                      label: 'Finalisasi\nPengajuan',
+                      assetPath:
+                          'assets/icons/ic_finalisasi_pengajuan.png'),
+                ],
+              ),
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Informasi Hasil',
+                  style:
+                      TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                Text(
+                  'Lihat Semua',
+                  style: TextStyle(
+                    color: Color(0xFF9E0000),
+                  ),
+                )
+              ],
+            ),
+            const ItemListPengajuan(
+                name: 'Regeh Renanda',
+                nim: '1302210001',
+                date: '02/04/2024',
+                tipePengajuan: 'Pengajuan KTM Rusak',
+                iconPath: 'assets/icons/ic_ktm_rusak.png')
+          ],
         ),
-        bottomNavigationBar: const CustomAdminBottomNavigationBar());
+      ),
+    );
   }
 }
